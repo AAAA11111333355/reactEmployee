@@ -33,9 +33,9 @@ class Header extends Component {
                 />
 
                 <Link to="/" className="logo">
-                        The Employee Shelf
+                        Crud Employees Collection
                 </Link>
-       
+
             </header>
         );
     }
