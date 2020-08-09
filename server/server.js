@@ -6,7 +6,21 @@ const config = require('./config/config').get(process.env.NODE_ENV);
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect(config.DATABASE)
+//mongoose.connect(config.DATABASE)
+
+mongoose.connect(config.DATABASE, {
+    useNewUrlParser: true,
+    //useCreateIndex:true,
+  //  useFindAndModify: false,
+    //useUnifiedTopology: true
+ })
+ .then(()=>{
+    console.log('con to db established')
+ })
+ .catch(err=>{
+    console.log(`db err: ${err.message}`);
+    process.exit(-1)
+ })
 
 const { User } = require('./models/user');
 const { Employee } = require('./models/employee');

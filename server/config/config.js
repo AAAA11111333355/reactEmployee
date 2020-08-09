@@ -1,11 +1,11 @@
 const config = {
     production:{
         SECRET: process.env.SECRET,
-        DATABASE: process.env.MONGODB_URI
+        DATABASE: 'mongodb+srv://Anshul:anshul123@employees.jaggb.mongodb.net/MyEmployees'
     },
     default:{
         SECRET: 'SUPERSECRETPASSWORD123',
-        DATABASE: 'mongodb://localhost:27017/MyEmployees'
+        DATABASE: 'mongodb+srv://Anshul:anshul123@employees.jaggb.mongodb.net/MyEmployees'
     }
 }
 
